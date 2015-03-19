@@ -1,0 +1,19 @@
+@import "compass";
+@import "framework/variable";
+@import "framework/mixin-basic";
+@import "framework/mixin-view";
+//reset
+@import "framework/reset";
+@import "framework/mixin-icons";
+.w-wrap{
+	@include w-wrap;
+}
+.header{
+	@include header;
+}
+.pro-line{
+	@include pro-line;
+}
+.footer{
+	@include footer;
+}

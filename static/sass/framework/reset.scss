@@ -1,26 +1,24 @@
 @import "variable";
 @import "compass/reset";
-html{height:100%}
-body{font-family:SimSun,Microsoft YaHei,Arial,SimHei,sans-serif;color:$colorText;line-height: 1.5;-webkit-text-size-adjust:none;font-size:$fontDefault;position: relative;min-height:100%;_background-image:url(about:blank);_background-attachment: fixed;}
-button::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"] > input[type="button"]::-moz-focus-inner,input[type="reset"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {border: 0; padding: 0}
-a{text-decoration:none;color:$colorText;outline:none;}
-a:hover{text-decoration:underline}
+// 字体 @font-face
+
+// Ping Hei light
+@font-face{
+	font-family: "PingHeilight";
+	src:url("../../static/font/pinghei-light.eot");
+	src:url("../../static/font/pinghei-light.eot?#font-spider") format("embedded-opentype"),
+		url('../../static/font/pinghei-light.woff') format('woff'),
+		url("../../static/font/pinghei-light.ttf") format("truetype"),
+		url("../../static/font/pinghei-light.svg") format("svg");
+	font-style: normal;
+	font-weight: normal;
+}
+body{font-family:"PingHeilight",MicroSoft YaHei,sans-serif;font-size: $fontMiddle;line-height: 1.5;-webkit-text-size-adjust:none;}
 .clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
 .clearfix{*zoom:1;}
-.hide{display:none;}
-
-input{padding:0;font-size:$fontMiddle}
-textarea{padding:5px;font-size:$fontDefault}
-::-webkit-input-placeholder{color:$colorTextDark;font-size:$fontMini}
-input:-moz-placeholder,input::-moz-placeholder{ color:$colorTextDark;font-size:$fontMini}
-textarea:-moz-placeholder,textarea::-moz-placeholder { color:$colorTextDark; font-size:$fontMini}
-input:placeholder,input::placeholder{color:$colorTextDark; font-size:$fontMini}
-textarea:placeholder,textarea::placeholder{color:$colorTextDark; font-size:$fontMini}
-input:focus::-webkit-input-placeholder{ color: transparent;}
-input:focus:-moz-placeholder{color:transparent;}
-textarea:focus:-moz-placeholder{ color: transparent;}
-textarea:focus::-webkit-input-placeholder { color: transparent;}
-// input[type="file"]{visibility:hidden;width:0}
+a{text-decoration: none;outline: none}
+.hide{display: none}
+.opacity{opacity: 0;filter:alpha(opacity=0);}
 
 
 

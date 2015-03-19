@@ -1,0 +1,103 @@
+@mixin header{
+	width: 1080px;
+	padding:20px 0;
+	margin:0 auto;
+	.j-logo{
+		float: left;
+		a{
+			@include icons-sprite(logo);
+			width:167px;
+			height: 58px;
+			display: block;
+		}
+	}
+	.nav-wrap{
+		float: right;
+	}
+	.nav-list{
+		float: left;
+		height: 60px;
+		line-height: 60px;
+		margin:0 40px;
+		font-size: $fontDefault;
+		a{
+			color:$colorTextLight
+		}
+	}
+}
+@mixin footer{
+	background-color: #ededed;
+	padding:50px 0;
+	text-align: center;
+	font-size: 14px;
+	color:#1c303b;
+}
+@mixin pro-header{
+	width: 100%;
+	padding:15px 0;
+	color:$colorWhite;
+	background:#000;
+	opacity: .8;
+	filter:alpha(opacity=80);
+	.pro-logo-j3{
+		@include icons-sprite(j3-logo);
+		width: 81px;
+		height: 18px;
+		float: left;
+	}
+	.pro-menu-wrap{
+		float: right;
+	}
+	.pro-menu-list{
+		float: left;
+		font-size: $fontMiddle;
+		margin:0 40px;
+		a{
+			color:#fff;
+			&.cur{
+				color:$colorAhover
+			}
+		}
+	}
+}
+@mixin pro-footer{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fff;
+	a{
+		font-size: 12px;
+		color:#999;
+	}
+	.back-home-btn{
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		vertical-align: middle;
+		@include icons-sprite(logo-icon);
+	}
+	.triangle-right{
+		margin:0 15px;
+		color:#e6e6e6;
+		font-size: 30px;
+		font-family: simsun;
+		vertical-align: middle;
+	}
+}
+@mixin pro-line{
+	width: 100%;
+	overflow: hidden;
+	color:$colorText;
+	text-align: center;
+	.pro-title{
+		font-size: $fontLargest;
+		margin-bottom: 40px;
+	}
+	.pro-info{
+		font-size: $fontLarge;
+		line-height: 1.8;
+	}
+	.pro-info-right{
+		overflow: hidden;
+	}
+}

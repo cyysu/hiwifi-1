@@ -13,7 +13,19 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    // 拷贝文件到发布目录，这样字体可被反复处理
+    // copy: {
+    //   main: {
+    //     src: '',
+    //     dest: ''
+    //   },
+    // },
+
     watch: {
+      // "font-spider": {
+      //   files: ['demo/*.html'],
+      //   tasks: ['font-spider']
+      // },
       jsmin: {
         files: ['static/javascript/*.js'],
         tasks: ['uglify']
@@ -27,6 +39,13 @@ module.exports = function(grunt) {
         tasks: ['imagemin']
       }
     },
+     // 字蛛插件：压缩与转码静态页面中的 WebFont
+    // 'font-spider': {
+    //   options: {},
+    //   main: {
+    //     src:'demo/*.html'
+    //   }
+    // }, 
     concat: {
       dist: {
         files: {}
@@ -71,7 +90,10 @@ module.exports = function(grunt) {
       },
     }
   });
-
+  
+  // grunt.loadNpmTasks('grunt-font-spider');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -82,4 +104,5 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', ['Hiwifi']);
 
+  // grunt.registerTask('default', ['copy', 'font-spider']);
 };
